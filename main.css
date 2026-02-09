@@ -1,0 +1,29 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.small {
+    line-height: 1.15rem;
+}
+
+.width-1 {
+    width: 3rem;
+    height: 3rem;
+}
+
+.width-3 {
+    width: 7rem;
+}
+
+.img-bg {
+    background-size: cover;
+    height: 27.5rem;
+}
+
+.bg-fading {
+    background: linear-gradient(to top, #000, transparent);
+}
