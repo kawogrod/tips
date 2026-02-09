@@ -16,14 +16,15 @@ body {
 }
 
 .width-3 {
-    width: 7rem;
+    width: 7.5rem;
 }
 
 .img-bg {
     background-size: cover;
-    height: 27.5rem;
+    height: 30rem;
 }
 
 .bg-fading {
     background: linear-gradient(to top, #000, transparent);
+
 }
