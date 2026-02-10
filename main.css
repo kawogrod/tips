@@ -29,3 +29,7 @@ body {
 
 }
 
+.bg-glass {
+    backdrop-filter: blur(1rem);
+}
+
