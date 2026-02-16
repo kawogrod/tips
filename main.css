@@ -26,7 +26,10 @@ body {
 
 .bg-fading {
     background: linear-gradient(to top, #212529, transparent);
+}
 
+.bg-fading-2 {
+    background: linear-gradient(to bottom, #212529, transparent);
 }
 
 .bg-glass {
