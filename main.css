@@ -35,11 +35,13 @@ body {
 
 .modal-bottom {
    position:fixed !important;
+   max-width: auto !important;
    top:auto;
    right:auto;
    left:auto;
    bottom:0;
 }
+
 
 
 
