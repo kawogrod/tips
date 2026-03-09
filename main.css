@@ -28,11 +28,17 @@ body {
     background: linear-gradient(to top, #212529, transparent);
 }
 
-.bg-fading-2 {
-    background: linear-gradient(to bottom, #212529, transparent);
-}
 
 .bg-glass {
     backdrop-filter: blur(1rem);
 }
+
+.modal-bottom {
+   position:fixed;
+   top:auto;
+   right:auto;
+   left:auto;
+   bottom:0;
+}
+
 
