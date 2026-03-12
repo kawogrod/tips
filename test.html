@@ -22,12 +22,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
     <body class="bg-black text-white pb-5 mb-4">
-      
-      <nav class="navbar navbar-dark bg-black sticky-top">
-        <div class="container px-3">
-          <a class="navbar-brand fs-4 fw-bold" href="#">Tipee</a>
-          <button class="btn p-0">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+      <nav class="navbar pb-0">
+        <div class="container px-0">
+          <button data-bs-toggle="modal" data-bs-target="#Modal" class="btn d-flex align-items-center justify-content-center p-0 rounded-pill border border-light border-opacity-25 width-1">
+            <img src="img/logo.png" alt="logo" width="40" height="40" class="img-fluid pt-1">
+          </button>
+          <button id="share" class="btn d-flex align-items-center justify-content-center p-0 rounded-pill border border-light border-opacity-25 width-1">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28" fill="#fff"><path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h120v80H240v400h480v-400H600v-80h120q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm200-240v-447l-64 64-56-57 160-160 160 160-56 57-64-64v447h-80Z"/></svg>
           </button>
         </div>
       </nav>
