@@ -13,7 +13,6 @@ body {
 .logo {
     font-family: "DM Sans", sans-serif!important;
     font-weight: 700!important;
-    font-style: italic!important;
     letter-spacing: -0.08em; 
     text-decoration: none !important;
     color: #fff !important;
@@ -41,19 +40,10 @@ body {
     background: linear-gradient(to bottom, #212529, transparent);
 }
 
-
 .bg-glass {
     backdrop-filter: blur(1rem);
 }
 
-.modal-bottom {
-   position:fixed !important;
-   max-width: auto !important;
-   top:auto;
-   right:auto;
-   left:auto;
-   bottom:0;
-}
 
 
 
