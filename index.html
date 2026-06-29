@@ -695,17 +695,6 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script>
-            const menuList = document.getElementById('MenuList');
-            document.body.addEventListener('activate.bs.scrollspy', function (event) {
-                const activeLink = menuList.querySelector('.active');
-                
-                if (activeLink) {
-                    const activeLi = activeLink.parentElement;
-                    const targetScroll = activeLi.offsetLeft - 16;
-                    menuList.scrollLeft = targetScroll;
-                }
-            });
-        </script>
+        
     </body>
 </html>
