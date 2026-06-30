@@ -134,7 +134,7 @@
         <section id="section1">
             <h4 class="border-bottom fw-semibold p-3 mt-3 mb-0">Menu całoroczne</h4>
             <!-- Espresso -->
-            <div class="row g-0 p-3 bg-white border-bottom">
+            <div class="row g-0 p-3 bg-white border-bottom" data-bs-toggle="offcanvas" data-bs-target="#offcanvasProduct">
                 <div class="col">
                     <div class="ratio ratio-1x1">
                         <img class="img-fluid object-fit-cover rounded-4" src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?q=80&w=987&auto=format&fit=crop">
@@ -679,8 +679,30 @@
                     </div>
                 </div>
             </section>
+            
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasProduct" aria-labelledby="offcanvasProductLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasProductLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        <div class="border-bottom mt-4 py-4 px-3 w-100">
+        <div class="border-bottom pb-4 p-3 w-100">
             <a href="" class="btn btn-primary rounded-pill shadow-sm icon-link justify-content-center fw-medium p-2 lh-lg w-100">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path></svg>
                 Stwórz cyfrowe menu
