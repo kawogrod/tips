@@ -1,7 +1,8 @@
-<html lang="pl"><head>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Kawogród - kawiarnia speciality | Tipee</title>
     <style>
         #list {
@@ -21,13 +22,11 @@
             overflow: hidden;
         }
     </style>
-
-    <link rel="stylesheet" href="main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+</head>
     <body class="bg-light pb-3" data-bs-spy="scroll" data-bs-target="#category-nav" data-bs-offset="120">
     
         <nav class="navbar bg-white sticky-top shadow-sm pt-1" id="category-nav">
@@ -102,14 +101,14 @@
                                     <svg style="min-width: 24px; min-height: 24px;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#777"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path></svg>
                                 </button>
                             </div>
-                            <div class="collapse py-3 small border-top" id="hoursCollapse">
-                                <div class="d-flex justify-content-between my-1" id="day-1"><span>Poniedziałek</span><span>07:30 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-2"><span>Wtorek</span><span>07:30 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-3"><span>Środa</span><span>07:30 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-4"><span>Czwartek</span><span>07:30 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-5"><span>Piątek</span><span>07:30 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-6"><span>Sobota</span><span>09:00 - 19:00</span></div>
-                                <div class="d-flex justify-content-between my-1" id="day-0"><span>Niedziela</span><span>09:00 - 19:00</span></div>
+                            <div class="collapse ps-4 py-3 ms-3 small border-top" id="hoursCollapse">
+                                <div class="d-flex my-1" id="day-1"><span class="w-50">Poniedziałek</span><span>07:30 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-2"><span class="w-50">Wtorek</span><span>07:30 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-3"><span class="w-50">Środa</span><span>07:30 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-4"><span class="w-50">Czwartek</span><span>07:30 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-5"><span class="w-50">Piątek</span><span>07:30 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-6"><span class="w-50">Sobota</span><span>09:00 - 19:00</span></div>
+                                <div class="d-flex my-1" id="day-0"><span class="w-50">Niedziela</span><span>09:00 - 19:00</span></div>
                             </div>
                         </div>
                         <a href="" class="icon-link gap-3 pb-3 border-bottom mb-3 text-black text-decoration-none w-100">
@@ -747,7 +746,7 @@
         </div>
 
         <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 2000;">
-            <div id="clipboardToast" class="toast align-items-center fs-5 bg-light shadow" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+            <div id="clipboardToast" class="toast align-items-center fs-5 bg-white shadow-none" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
                 <div class="d-flex justify-content-center">
                     <div class="toast-body text-center py-2 px-4 fw-medium small">
                         Skopiowano do schowka!
