@@ -822,14 +822,16 @@
             </div>
         </div>
 
-        <div class="offcanvas offcanvas-bottom h-75 rounded-top-4" tabindex="-1" id="Product" aria-labelledby="ProductLabel">
-            <div class="offcanvas-body d-flex flex-column rounded-top-4 pb-5">
-                <div class="ratio ratio-4x3 mb-3">
-                    <img id="dynamicProductImg" class="img-fluid object-fit-cover rounded-4" src="">
+        <div class="offcanvas offcanvas-bottom h-75" tabindex="-1" id="Product" aria-labelledby="ProductLabel">
+            <div class="offcanvas-body d-flex flex-column px-0">
+                <div class="ratio ratio-4x3">
+                    <img id="dynamicProductImg" class="img-fluid object-fit-cover" src="">
                 </div>
-                <h4 class="offcanvas-title fw-bold mb-0" id="dynamicProductTitle"></h4>
-                <p class="fs-5 fw-semibold lh-1 pt-2 pb-3 mb-0" id="dynamicProductPrice"></p>
-                <p class="mb-0" id="dynamicProductDesc"></p>
+                <div class="p-3">
+                    <h4 class="offcanvas-title fw-bold" id="dynamicProductTitle"></h4>
+                    <p class="fs-5 fw-bold text-black-50" id="dynamicProductPrice"></p>
+                    <p id="dynamicProductDesc"></p>
+                </div>
             </div>
             <div class="sticky-bottom border-top p-3 mt-auto">
                 <button class="btn btn-primary fw-medium p-2 lh-lg rounded-pill w-100" id="addToWishlistBtn">Zapisz pozycję</button>
