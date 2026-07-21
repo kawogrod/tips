@@ -1051,28 +1051,6 @@
                 });
             }
 
-
-            // --- 5. PRZYCISK UDOSTĘPNIJ (iOS Share API / Link Copy Fallback) ---
-            const shareBtn = document.getElementById('sharePageBtn');
-            shareBtn.addEventListener('click', function () {
-                if (navigator.share) {
-                    navigator.share({
-                        title: 'Kawogród - kawiarnia speciality',
-                        text: 'Sprawdź menu kawiarni speciality Kawogród!',
-                        url: window.location.href
-                    }).catch(console.error);
-                } else {
-                    // Rezerwowy mechanizm zapisu adresu URL w przypadku braku wsparcia API systemowego
-                    navigator.clipboard.writeText(window.location.href).then(() => {
-                        const toastBody = toastEl.querySelector('.toast-body');
-                        const defaultText = toastBody.textContent;
-                        toastBody.textContent = "Link do strony skopiowany do schowka!";
-                        bootstrapToast.show();
-                        setTimeout(() => { toastBody.textContent = defaultText; }, 2500);
-                    });
-                }
-            });
-
             // --- 7. FIX SCROLLSPY (Automatyczne przesuwanie poziomego paska kategorii) ---
             const scrollSpyHorizontalWrapper = document.getElementById('list');
             
