@@ -60,13 +60,13 @@
             <div class="container-fluid text-nowrap overflow-x-auto p-0 border-top border-2 border-white" id="list">
                 <ul class="nav nav-pills flex-nowrap row-gap-0" id="categoriesPillsWrapper">
                     <li class="nav-item">
-                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-2 border-white rounded-0 active" href="#section1">Menu całoroczne</a>
+                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-3 border-white rounded-0 active" href="#section1">Menu całoroczne</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-2 border-white rounded-0" href="#section2">Lato w Kawogrodzie</a>
+                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-3 border-white rounded-0" href="#section2">Lato w Kawogrodzie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-2 border-white rounded-0" href="#section3">Jedzenie</a>
+                        <a class="nav-link p-3 fw-medium lh-1 border-bottom border-3 border-white rounded-0" href="#section3">Jedzenie</a>
                     </li>
                 </ul>
             </div>
@@ -760,26 +760,30 @@
         </div>
 
         <footer class="icon-link flex-wrap gap-3 lh-1 pt-4 pb-5 px-3">
-            <a href="https://tally.so/r/1A5Lbp" class="link-dark text-decoration-none">© 2026 Tipee</a>
+            <a href="https://tally.so/r/1A5Lbp" class="link-dark text-decoration-none">© 2026 Restee</a>
             <a href="" class="link-dark text-decoration-none">Warunki Korzystania</a>
             <a href="" class="link-dark text-decoration-none">Polityka Prywatności</a>
             <a href="" class="link-dark text-decoration-none">Pliki Cookies</a>
             <a href="" class="link-dark text-decoration-none">Najczęstsze pytania</a>
         </footer>
 
-        <div class="offcanvas offcanvas-bottom rounded-top-4 h-75" tabindex="-1" id="Product" aria-labelledby="ProductLabel">
-            <div class="offcanvas-body d-flex flex-column rounded-top-4 p-0">
-                <span class="bg-secondary-subtle pt-1 px-4 rounded-pill mx-auto my-2"></span>
-                <div class="ratio ratio-4x3 mt-1">
-                    <img id="dynamicProductImg" class="img-fluid object-fit-cover" src="">
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="Product" aria-labelledby="ProductLabel">
+            <div class="offcanvas-body d-flex flex-column p-0">
+                <div class="position-relative">
+                    <div class="position-absolute top-0 end-0 p-3">
+                        <button type="button" class="btn-close bg-secondary-subtle rounded-circle me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="ratio ratio-1x1">
+                        <img id="dynamicProductImg" class="img-fluid object-fit-cover" src="">
+                    </div>
                 </div>
                 <div class="p-3">
-                    <h4 class="offcanvas-title fw-bold" id="dynamicProductTitle"></h4>
-                    <p class="fs-5 fw-bold text-black-50" id="dynamicProductPrice"></p>
+                    <h4 class="display-4 offcanvas-title fw-bold mb-1" id="dynamicProductTitle"></h4>
+                    <p class="fs-2 fw-bold" id="dynamicProductPrice"></p>
                     <p id="dynamicProductDesc"></p>
                 </div>
             </div>
-            <div class="sticky-bottom border-top p-3 mt-auto">
+            <div class="sticky-bottom shadow-lg p-3 mt-auto">
                 <button class="btn btn-primary fw-medium p-2 lh-lg rounded-pill w-100" id="addToWishlistBtn">Zapisz pozycję</button>
             </div>
         </div>
