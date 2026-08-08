@@ -794,7 +794,7 @@
         <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
             <div class="offcanvas-header align-items-start">
                 <div class="d-flex flex-column me-3">
-                    <h4 class="fs-4 offcanvas-title fw-bold mb-1">Lista produktów</h4>
+                    <h4 class="fs-4 offcanvas-title fw-bold mb-2">Lista produktów</h4>
                     <p class="text-black-50 small mb-0">Tutaj będą pojawiać się twoje ulubione pozycje z menu.</p>
                 </div>
                 <div class="ms-auto">
@@ -923,7 +923,7 @@
                     li.innerHTML = `
                         <div class="d-flex align-items-center gap-3" data-id="${item.id}">
                             <img src="${item.img}" class="rounded-3 object-fit-cover" style="width: 4.5rem; height: 4.5rem;" alt="${item.title}">
-                            <div class="text-truncate">
+                            <div>
                                 <p class="fw-semibold mb-0">${item.title}</p>
                                 <p class="fw-semibold mb-0 text-primary">${item.price}</p>
                             </div>
