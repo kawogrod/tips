@@ -797,7 +797,7 @@
                 <button type="button" class="btn text-primary fw-medium p-0 ms-auto m-0" data-bs-dismiss="offcanvas" aria-label="Close">Zamknij</button>
             </div>
 
-            <div class="offcanvas-body pt-1 pb-0 px-3 d-flex flex-column">
+            <div class="offcanvas-body py-0 px-3 d-flex flex-column">
 
                 <div id="favoritesEmptyState" class="text-center py-5 px-3">
                     <svg class="text-muted mb-3 opacity-50" xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor">
@@ -920,6 +920,7 @@
                         <div class="d-flex align-items-center justify-content-between gap-3 w-100">
                             <div>
                                 <p class="fw-semibold lh-sm mb-1">${item.title}</p>
+                                <p class="text-truncate-box small text-black-50 mb-1">${item.desc}</p>
                                 <p class="mb-0">${item.price}</p>
                             </div>
                             <button class="btn bg-secondary-subtle rounded-circle p-1 text-black remove-fav-btn" data-id="${item.id}">
