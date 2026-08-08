@@ -914,11 +914,11 @@
                 // Renderowanie elementów w panelu polubionych
                 wishlist.forEach(item => {
                     const li = document.createElement('li');
-                    li.className = "list-group-item d-flex align-items-start gap-1 pb-3 px-0 bg-white border-0";
+                    li.className = "list-group-item d-flex align-items-start gap-3 pb-3 px-0 bg-white border-0";
                     li.innerHTML = `
                         <img src="${item.img}" class="rounded-4 object-fit-cover" style="width: 5.5rem; height: 5.5rem;" alt="${item.title}">
-                        <div class="d-flex align-items-center justify-content-between gap-3 pb-2 ms-2 border-bottom w-100">
-                            <div class="mb-1">
+                        <div class="d-flex align-items-center justify-content-between gap-3 pb-3 border-bottom w-100">
+                            <div>
                                 <p class="fw-semibold lh-sm text-uppercase my-1">${item.title}</p>
                                 <p class="small mb-2 text-truncate-box text-black-50">${item.desc}</p>
                                 <p class="fw-semibold mb-0">${item.price}</p>
