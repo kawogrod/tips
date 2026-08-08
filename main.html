@@ -791,11 +791,11 @@
             </div>
         </div>
 
-        <div class="offcanvas offcanvas-bottom h-100 rounded-top-5" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
+        <div class="offcanvas offcanvas-bottom h-100 rounded-top-4" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
             <div class="offcanvas-header align-items-start">
                 <div class="d-flex flex-column me-3">
-                    <h4 class="fs-1 offcanvas-title fw-bold my-1">Ulubione pozycje</h4>
-                    <p class="text-black-50">Tutaj będą pojawiać się twoje ulubione pozycje z menu.</p>
+                    <h4 class="fs-2 offcanvas-title fw-bold my-1">Ulubione pozycje</h4>
+                    <p class="text-black-50 mb-2">Tutaj będą pojawiać się twoje ulubione pozycje z menu.</p>
                 </div>
                 <div class="ms-auto">
                     <button type="button" class="btn-close bg-secondary-subtle rounded-circle p-3 m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -813,7 +813,7 @@
                     </p>
                 </div>
 
-                <ul class="list-group list-group-flush flex-grow-1 overflow-auto border-top py-3" id="favoritesContainer">
+                <ul class="list-group list-group-flush flex-grow-1 overflow-auto border-top py-2" id="favoritesContainer">
                 </ul>
 
                 <div class="sticky-bottom py-3 mt-auto">
@@ -921,11 +921,11 @@
                     const li = document.createElement('li');
                     li.className = "list-group-item d-flex align-items-center justify-content-between py-3 px-0 bg-white";
                     li.innerHTML = `
-                        <div class="d-flex align-items-center gap-2">
-                            <img src="${item.img}" class="rounded-4 object-fit-cover" style="width: 6rem; height: 6rem;" alt="${item.title}">
-                            <div class="me-2">
-                                <p class="fs-5 fw-semibold lh-sm text-uppercase mb-0">${item.title}</p>
-                                <p class="fs-5 fw-semibold mb-0 text-primary">${item.price}</p>
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="${item.img}" class="rounded-4 object-fit-cover" style="width: 5rem; height: 5rem;" alt="${item.title}">
+                            <div class="me-3">
+                                <p class="fw-semibold lh-sm text-uppercase mb-0">${item.title}</p>
+                                <p class="fw-semibold mb-0 text-primary">${item.price}</p>
                             </div>
                         </div>
                         <button class="btn btn-link p-0 remove-fav-btn" data-id="${item.id}">
