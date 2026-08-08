@@ -794,7 +794,7 @@
         <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
             <div class="offcanvas-header align-items-start">
                 <div class="d-flex flex-column me-3">
-                    <h4 class="fs-4 offcanvas-title fw-bold mb-2">Lista produktów</h4>
+                    <h4 class="fs-4 offcanvas-title fw-bold mb-1">Lista produktów</h4>
                     <p class="text-black-50 small mb-0">Tutaj będą pojawiać się twoje ulubione pozycje z menu.</p>
                 </div>
                 <div class="ms-auto">
@@ -921,15 +921,15 @@
                     const li = document.createElement('li');
                     li.className = "list-group-item d-flex align-items-center justify-content-between p-3 bg-white";
                     li.innerHTML = `
-                        <div class="d-flex align-items-center gap-3 text-truncate">
-                            <img src="${item.img}" class="rounded-3 object-fit-cover" style="width: 48px; height: 48px;" alt="${item.title}">
+                        <div class="d-flex align-items-center gap-3" data-id="${item.id}">
+                            <img src="${item.img}" class="rounded-3 object-fit-cover" style="width: 4.5rem; height: 4.5rem;" alt="${item.title}">
                             <div class="text-truncate">
-                                <p class="fw-semibold mb-0 text-truncate text-dark small">${item.title}</p>
-                                <p class="mb-0 text-primary small fw-medium">${item.price}</p>
+                                <p class="fw-semibold mb-0">${item.title}</p>
+                                <p class="fw-semibold mb-0 text-primary">${item.price}</p>
                             </div>
                         </div>
-                        <button class="btn btn-link link-danger p-1 remove-fav-btn" data-id="${item.id}">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M280-120q-33 0-56.5-23.5T200-260v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T720-120H280Zm440-600H240v520q0 17 11.5 28.5T280-160h480q17 0 28.5-11.5T800-240v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM240-720v520-520Z"/></svg>
+                        <button class="btn btn-link p-0 remove-fav-btn" data-id="${item.id}">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                         </button>
                     `;
                     container.appendChild(li);
