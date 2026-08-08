@@ -808,7 +808,7 @@
                     </p>
                 </div>
 
-                <ul class="list-group list-group-flush flex-grow-1 overflow-auto border-top py-1" id="favoritesContainer">
+                <ul class="list-group list-group-flush flex-grow-1 overflow-auto border-top py-3" id="favoritesContainer">
                 </ul>
 
                 <div class="sticky-bottom py-3 mt-auto">
@@ -914,7 +914,7 @@
                 // Renderowanie elementów w panelu polubionych
                 wishlist.forEach(item => {
                     const li = document.createElement('li');
-                    li.className = "list-group-item d-flex align-items-center justify-content-between py-3 px-0 bg-white border-0";
+                    li.className = "list-group-item d-flex align-items-center justify-content-between pb-3 px-0 bg-white border-0";
                     li.innerHTML = `
                         <div class="d-flex align-items-center gap-3">
                             <img src="${item.img}" class="rounded-3 object-fit-cover" style="width: 5rem; height: 5rem;" alt="${item.title}">
