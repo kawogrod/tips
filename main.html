@@ -795,7 +795,6 @@
             <div class="offcanvas-header align-items-start">
                 <div class="d-flex flex-column me-3">
                     <h4 class="fs-2 offcanvas-title fw-bold my-1">Ulubione pozycje</h4>
-                    <p class="text-black-50 mb-2">Tutaj będą pojawiać się twoje ulubione pozycje z menu.</p>
                 </div>
                 <div class="mt-2 ms-auto">
                     <button type="button" class="btn-close bg-secondary-subtle rounded-circle p-2 m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -926,11 +925,11 @@
                             <div class="me-3">
                                 <p class="fw-semibold lh-sm text-uppercase mb-1">${item.title}</p>
                                 <p class="small mb-2 text-truncate-box text-black-50">${item.desc}</p>
-                                <p class="fw-semibold mb-0 text-primary">${item.price}</p>
+                                <p class="fw-semibold mb-0">${item.price}</p>
                             </div>
                         </div>
                         <button class="btn bg-secondary-subtle rounded-circle p-1 text-black remove-fav-btn" data-id="${item.id}">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M200-440v-80h560v80H200Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                         </button>
                     `;
                     container.appendChild(li);
