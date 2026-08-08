@@ -791,12 +791,9 @@
             </div>
         </div>
 
-        <div class="offcanvas offcanvas-bottom h-75 rounded-top-4" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
-            <div class="offcanvas-header border-bottom">
-                <h5 class="offcanvas-title fw-semibold" id="favoritesLabel">
-                    Twoje polubione pozycje
-                </h5>
-                <button type="button" class="btn-close bg-secondary-subtle rounded-circle me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="favorites" aria-labelledby="favoritesModalLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close bg-light rounded-circle p-3 me-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
 
             <div class="offcanvas-body p-0 d-flex flex-column">
@@ -812,7 +809,7 @@
                 <ul class="list-group list-group-flush flex-grow-1 overflow-auto" id="favoritesContainer">
                 </ul>
 
-                <div class="border-top p-3 mt-auto">
+                <div class="sticky-bottom shadow-lg p-3 mt-auto">
                     <button type="button" class="btn btn-primary fw-medium p-2 lh-lg rounded-pill w-100" data-bs-dismiss="offcanvas">
                         Zamknij
                     </button>
