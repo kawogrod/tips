@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
 </head>
-    <body class="bg-light" data-bs-spy="scroll" data-bs-target="#category-nav" data-bs-offset="50">
+    <body class="bg-light" data-bs-spy="scroll" data-bs-target="#CategoryNav" data-bs-offset="20">
         <nav class="navbar bg-white sticky-top shadow-sm pb-0 z-2">
             <div class="container-fluid flex-nowrap gap-3 pb-2 px-3">
                 <div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="container-fluid text-nowrap overflow-x-auto p-0" id="list">
-                <ul class="nav nav-pills flex-nowrap row-gap-0" id="categoriesPillsWrapper">
+                <ul class="nav nav-pills flex-nowrap row-gap-0" id="CategoryNav">
                     <li class="nav-item">
                         <a class="nav-link py-2 px-3 fw-medium border-bottom border-4 border-white rounded-0 active" href="#section1">Menu całoroczne</a>
                     </li>
@@ -946,7 +946,7 @@
             const scrollSpyHorizontalWrapper = document.getElementById('list');
             
             document.body.addEventListener('activate.bs.scrollspy', function (e) {
-                const activeNavLink = document.querySelector('#category-nav .nav-link.active');
+                const activeNavLink = document.querySelector('#CategoryNav .nav-link.active');
                 if (activeNavLink) {
                     // Obliczanie relatywnego przesunięcia w poziomie wewnątrz paska przewijania
                     const wrapperRect = scrollSpyHorizontalWrapper.getBoundingClientRect();
