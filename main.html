@@ -865,9 +865,17 @@
             <div id="clipboardToast" class="toast align-items-center fs-5 bg-white border-0 shadow-sm" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
                 <div class="d-flex justify-content-center small">
                     <div class="toast-body text-center p-3 fw-bold small lh-1">
-                        Link został skopiowany do schowka
+                        Pomyślnie skopiowano do schowka
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="d-none d-sm-block bg-white fixed-top bottom-0 start-0 end-0 overflow-hidden d-flex z-3">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" height="10rem" viewBox="0 -960 960 960" width="10rem" fill="#000"><path d="M480-540ZM80-160v-80h400v80H80Zm120-120q-33 0-56.5-23.5T120-360v-360q0-33 23.5-56.5T200-800h560q33 0 56.5 23.5T840-720H200v360h280v80H200Zm600 40v-320H640v320h160Zm-180 80q-25 0-42.5-17.5T560-220v-360q0-25 17.5-42.5T620-640h200q25 0 42.5 17.5T880-580v360q0 25-17.5 42.5T820-160H620Zm100-300q13 0 21.5-9t8.5-21q0-13-8.5-21.5T720-520q-12 0-21 8.5t-9 21.5q0 12 9 21t21 9Zm0 60Z"/></svg>
+                <div class="fs-1 fw-semibold mb-3 w-50 lh-1">Menu dostępne jest tylko na urządzeniach mobilnych</div>
+                <p class="fs-5 w-50">Aby dalej korzystać z menu, otwórz tę stronę na swoim telefonie. Menu zostało zoptymalizowane pod kątem urządzeń mobilnych, aby zapewnić wygodne przeglądanie oferty.</p>
             </div>
         </div>
 
@@ -875,6 +883,72 @@
     
         <script>
         document.addEventListener('DOMContentLoaded', () => {
+            const clipboardButtons = document.querySelectorAll('.clipboard-trigger');
+            const toastEl = document.getElementById('clipboardToast');
+            const bootstrapToast = new bootstrap.Toast(toastEl);
+
+            clipboardButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const parent = this.closest('.icon-link');
+                    if (parent) {
+                        const targetTextElement = parent.querySelector('.text-copyable');
+                        if (targetTextElement) {
+                            const rawText = targetTextElement.textContent.trim();
+                            navigator.clipboard.writeText(rawText).then(() => {
+                                bootstrapToast.show();
+                            }).catch(err => {
+                                console.error('Błąd zapisu do schowka: ', err);
+                            });
+                        }
+                    }
+                });
+            });
+
+            // --- 2. LOGIKA GODZIN OTWARCIA (STATUSU) ---
+            const businessHours = {
+                1: { open: '07:00', close: '19:00' }, // Poniedziałek
+                2: { open: '07:30', close: '19:00' }, // Wtorek
+                3: { open: '07:30', close: '19:00' }, // Środa
+                4: { open: '07:30', close: '19:00' }, // Czwartek
+                5: { open: '07:30', close: '19:00' }, // Piątek
+                6: { open: '09:00', close: '19:00' }, // Sobota
+                0: { open: '09:00', close: '19:00' }  // Niedziela
+            };
+
+            function updateBusinessStatus() {
+                const now = new Date();
+                const currentDay = now.getDay(); 
+                const currentHours = now.getHours();
+                const currentMinutes = now.getMinutes();
+                const currentTimeString = `${String(currentHours).padStart(2, '0')}:${String(currentMinutes).padStart(2, '0')}`;
+                
+                const activeDayRow = document.getElementById(`day-${currentDay}`);
+                if (activeDayRow) {
+                    activeDayRow.classList.add('fw-bold', 'text-primary');
+                }
+
+                const todaySchedule = businessHours[currentDay];
+                const statusTextEl = document.getElementById('currentStatusText');
+
+                if (!todaySchedule) {
+                    statusTextEl.textContent = "Zamknięte";
+                    return;
+                }
+
+                if (currentTimeString >= todaySchedule.open && currentTimeString < todaySchedule.close) {
+                    statusTextEl.textContent = `Zamknięcie o ${todaySchedule.close}`;
+                } else {
+                    if (currentTimeString < todaySchedule.open) {
+                        statusTextEl.textContent = `Otwarcie o ${todaySchedule.open}`;
+                    } else {
+                        const nextDay = (currentDay + 1) % 7;
+                        const nextSchedule = businessHours[nextDay];
+                        statusTextEl.textContent = `Otwarcie o ${nextSchedule.open}`;
+                    }
+                }
+            }
+            updateBusinessStatus();
 
             // SHARE
             document.getElementById('share')?.addEventListener('click', async () => {
