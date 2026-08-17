@@ -1,0 +1,55 @@
+<html lang="pl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kreator cyfrowego menu | Restee</title>
+    <style>
+        #list {
+            -ms-overflow-style: none;
+            scrollbar-width: none; 
+            scroll-behavior: smooth;
+        }
+        
+        #list::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .text-truncate-box {
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 2rem!important;
+            text-wrap-style: balance;
+        }
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            color: var(--bs-nav-pills-link-active-bg) !important;
+            background-color: transparent !important;
+            border-color: var(--bs-nav-pills-link-active-bg) !important;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+  </head>
+    <body>
+        <div class="d-flex flex-column vh-100 p-4">
+            <a class="display-5 logo text-black" href="#">Restee</a>
+            <div class="d-flex flex-column text-center my-auto">
+                <h1 class="display-3 fw-bold">Witaj ponownie!</h1>
+                <p class="small mt-1 mb-4">Stwórz cyfrowe menu za darmo.</p>
+                <form class="d-flex  flex-column gap-2 px-3">
+                    <input type="email" class="form-control py-2" placeholder="Adres e-mail">
+                    <input type="password" class="form-control py-2" placeholder="Hasło">
+                    <button type="submit" class="btn btn-primary lh-lg rounded-pill mt-3">Zaloguj się</button>
+                </form>
+                <p class="text-black-50 small my-2">Zapomniałeś hasła? <a href="#" class="text-decoration-underline">Odzyskaj dostęp</a></p>
+                <p class="text-black-50 small">Nie masz konta? <a href="#" class="text-decoration-underline">Zarejestruj się</a></p>
+            </div>
+            <p class="text-black-50 small mb-0">Przechodząc dalej, oznajmiasz, że zapoznałeś się oraz akceptujesz nasze Warunki użytkowania oraz naszą Politykę Prywatności.</p>
+        </div>
+    </body>
+</html>
